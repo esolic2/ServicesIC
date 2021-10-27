@@ -1,0 +1,19 @@
+---
+execution:
+- concurrency:50
+  hold-for: 3m
+  ramp-up: 2m
+  
+  scenario: Choose Flight
+ scenarios:
+  Choose Flight:
+    requests:
+    - label: blazedemo
+      method: GET
+      url:
+    - label: reserve
+      method: POST
+      url:
+      boyd:
+        fromPort: Paris
+        toPort: Guatemala
